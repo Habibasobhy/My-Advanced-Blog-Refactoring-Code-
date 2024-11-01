@@ -1,0 +1,203 @@
+:root{
+    /* * Fonts */
+    --ff-primary : Arial, sans-serif;
+
+    /* * Colors */
+    --primary-color : #007bff;
+    --secondary-color : #666;
+    --default-color : #212529;
+    --light-color : #fff;
+    --border-color : #ddd;
+    --bg-grey-light : #f8f9fa;
+    --bg-dark : #343a40;
+    --bg-grey : #f4f4f9;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--bg-grey);
+}  
+
+/* & Start navbar style */
+.nav::after{
+    content : "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 5px;
+    background-color: var(--light-color);
+}
+
+.nav{
+    background-color: var(--primary-color);
+}
+
+.nav .container-fluid{
+    padding-block: 20px;
+    display: block;
+}
+
+.nav .navbar-nav{
+    gap: 30px;
+    align-items: center;
+}
+
+.nav .navbar-nav .nav-link{
+    position: relative;
+    padding: 8px 0 0 0;
+}
+
+.nav .navbar-nav .nav-link:hover::after{
+    content : "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-color);
+    bottom : 3px;
+    left: 0px;
+}
+
+.nav .container-fluid .navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.nav .mode{
+    width: 30px;
+    height: 30px;
+}
+
+.nav .mode i{
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--light-color);
+    position: absolute;
+    right: 55px;
+    bottom : 28px
+}
+
+.nav .mode .dark-mode{
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .nav .container-fluid{
+        display: flex;
+        padding-bottom: 5px;
+    }
+
+    .nav .mode i{
+        bottom : 50px;
+    }
+}
+
+/* & End  navbar style */
+
+/* ^ ============================================================== */
+
+/* & Start article cards Style*/
+
+.card {
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--light-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+/* & End  article cards Style*/
+
+/* ^ ============================================================== */
+
+/* & Start sidebar Style*/
+
+.sidebar {
+    background-color: var(--bg-grey-light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color : var(--default-color);
+    transition: 0.4s transform;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.sidebar:hover{
+    border : 2px solid var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* & End  sidebar Style*/
+
+#backToTopBtn {
+    right: 20px;
+    bottom : 35px;
+    border : 0;
+    display: none;
+}
+
+
+/* ^ ============================================================== */
+
+/* & Start Footer Style*/
+
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--light-color);
+    margin-top: 40px;
+}
+
+.footer .container h5::after{
+    content : "";
+    width: 150px;
+    height: 3px;
+    background-color : var(--primary-color);
+    bottom : -5px;
+    left: 0;
+    position: absolute;
+}
+
+.footer .container form textarea{
+    resize: none;
+}
+
+/* & End  Footer Style*/

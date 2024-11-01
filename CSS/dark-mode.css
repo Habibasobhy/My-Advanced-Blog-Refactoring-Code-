@@ -1,0 +1,33 @@
+:root:has(.mode input:checked){
+    /* * Colors */
+    --primary-color : rgb(193, 126, 31);
+    --secondary-color : #666;
+    --default-color : #fafafa;
+    --light-color : #fff;
+    --border-color : #ddd;
+    --bg-grey-light : #292929;
+    --bg-dark : #343a40;
+    --bg-grey : #121212;
+}
+
+body:has(.mode input:checked) .nav .mode .dark-mode{
+    display: block;
+}
+
+body:has(.mode input:checked) .nav .mode .light-mode{
+    display: none;
+}
+
+body:has(.mode input:checked) .card a,
+body:has(.mode input:checked) .footer button,
+body:has(.mode input:checked) #backToTopBtn{
+    background-color : var(--primary-color) !important;
+    border : none;
+}
+
+
+
+body:has(.mode input:checked) .card a:focus,
+body:has(.mode input:checked) .footer button:focus{
+    box-shadow: 0 0 0 .25rem rgba(193, 126 , 31, .5);
+}
